@@ -1,0 +1,26 @@
+# OS / IDE
+.DS_Store
+.idea/
+.vscode/
+*.iml
+
+# 비밀값 · 로컬 설정
+.env
+.env.*
+backend/src/main/resources/application.properties
+backend/src/main/resources/application-*.properties
+backend/src/main/resources/application*.yml
+*.pem
+*.key
+
+# 빌드 산출물
+backend/.gradle/
+backend/build/
+web/node_modules/
+web/dist/
+
+# 로그 · 덤프
+*.log
+*.rdb
+*.dump
+*.sql.gz

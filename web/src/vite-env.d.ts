@@ -1,0 +1,12 @@
+/// <reference types="vite/client" />
+
+interface ImportMetaEnv {
+  readonly VITE_API_BASE?: string;
+  readonly VITE_EMBEDDING_MODEL?: string;
+  readonly VITE_GOOGLE_CLIENT_ID?: string;
+  readonly VITE_KAKAO_JS_KEY?: string;
+}
+
+interface ImportMeta {
+  readonly env: ImportMetaEnv;
+}

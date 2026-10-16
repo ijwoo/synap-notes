@@ -1,0 +1,28 @@
+.graph-screen {
+  position: relative;
+  flex: 1;
+  min-height: 0;
+  overflow: hidden;
+}
+
+.graph-wrap {
+  position: absolute;
+  inset: 0 0 calc(64px + env(safe-area-inset-bottom)) 0;
+  background: hsl(var(--graph-bg));
+  touch-action: none;
+}
+/* 데스크탑: 하단 탭바 없음 → 그래프가 영역 전체 */
+@media (min-width: 768px) {
+  .graph-wrap {
+    inset: 0;
+  }
+}
+
+.graph-canvas {
+  display: block;
+  cursor: grab;
+  touch-action: none;
+}
+.graph-canvas:active {
+  cursor: grabbing;
+}

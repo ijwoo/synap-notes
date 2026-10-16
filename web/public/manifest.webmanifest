@@ -1,0 +1,12 @@
+{
+  "name": "Synap",
+  "short_name": "Synap",
+  "description": "메모 자동 연결 노트앱",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#ffffff",
+  "theme_color": "#ffffff",
+  "icons": []
+}

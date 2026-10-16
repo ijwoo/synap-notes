@@ -1,0 +1,111 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 215 25% 13%;
+    --card: 0 0% 100%;
+    --card-foreground: 215 25% 13%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 215 25% 13%;
+    --primary: 217 91% 58%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 210 20% 96%;
+    --secondary-foreground: 216 14% 34%;
+    --muted: 210 20% 96%;
+    --muted-foreground: 213 11% 56%;
+    --accent: 214 100% 97%;
+    --accent-foreground: 217 91% 52%;
+    --destructive: 0 72% 51%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 214 16% 90%;
+    --input: 214 16% 90%;
+    --ring: 217 91% 58%;
+    --radius: 0.95rem;
+
+    /* graph (theme-aware) */
+    --graph-bg: 210 30% 97%;
+    --graph-label: 215 25% 13%;
+    --graph-ring: 0 0% 100%;
+    --graph-edge: 215 14% 50%;
+  }
+
+  .dark {
+    --background: 222 24% 9%;
+    --foreground: 210 20% 92%;
+    --card: 222 20% 12%;
+    --card-foreground: 210 20% 92%;
+    --popover: 222 20% 12%;
+    --popover-foreground: 210 20% 92%;
+    --primary: 217 91% 60%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 217 19% 18%;
+    --secondary-foreground: 210 20% 90%;
+    --muted: 217 19% 18%;
+    --muted-foreground: 215 14% 62%;
+    --accent: 217 33% 20%;
+    --accent-foreground: 213 94% 78%;
+    --destructive: 0 63% 50%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 217 16% 22%;
+    --input: 217 16% 24%;
+    --ring: 217 91% 60%;
+
+    --graph-bg: 222 20% 11%;
+    --graph-label: 210 20% 90%;
+    --graph-ring: 222 22% 16%;
+    --graph-edge: 215 12% 60%;
+  }
+
+  * {
+    border-color: hsl(var(--border));
+    -webkit-tap-highlight-color: transparent;
+  }
+  html {
+    height: 100vh;
+    height: 100dvh;
+  }
+  html,
+  body,
+  #root {
+    height: 100%;
+    margin: 0;
+  }
+  body {
+    @apply bg-background text-foreground;
+    font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+  }
+  button {
+    font-family: inherit;
+  }
+}
+
+@layer components {
+  .app-shell {
+    @apply relative mx-auto flex w-full max-w-[480px] flex-col overflow-hidden bg-background;
+    height: 100dvh;
+  }
+  .screen {
+    @apply min-h-0 flex-1 overflow-y-auto;
+    -webkit-overflow-scrolling: touch;
+    padding-top: env(safe-area-inset-top);
+    padding-bottom: calc(64px + env(safe-area-inset-bottom));
+  }
+  .screen-pad {
+    @apply px-[18px] py-5;
+  }
+}
+
+/* 데스크탑: 하단 탭바가 없으니 본문은 가운데 폭 제한 + 아래 여백 축소 */
+@media (min-width: 768px) {
+  .screen {
+    max-width: 760px;
+    margin-inline: auto;
+    width: 100%;
+    padding-bottom: 32px;
+  }
+}

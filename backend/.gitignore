@@ -1,0 +1,20 @@
+.gradle/
+build/
+!gradle/wrapper/gradle-wrapper.jar
+
+# IDE
+.idea/
+*.iml
+.vscode/
+
+# OS
+.DS_Store
+
+# env
+.env
+
+# local run helpers (machine-specific, contains API key)
+local/
+
+# logs
+*.log
